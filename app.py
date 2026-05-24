@@ -215,7 +215,7 @@ PALETTE = {
 # ── Load Data ─────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv('Data_Finance_6_Bulan.csv')
+    df = pd.read_csv('Data_Finance_Final.csv')
     df['Date'] = pd.to_datetime(df['Date'])
     df = df[df['Category'] != 'Uncategorized'].reset_index(drop=True)
     df['Year']      = df['Date'].dt.year
